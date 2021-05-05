@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Porshe.kz</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Porsche Kz</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Agency</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Our offers">Our offers</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Contacts">Feedback</a>
+      <a href="#" onclick="slowScroll('#faq')" title="FAQ">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Welcome to website Porsche</h1>
+    <h3>Here you will find the best deals!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>REAL ESTATE AGENCY</h2>
+      <span>Welcome to PorsheKZ official website</span>
+    </div>
+    <div class="text">
+      <span>Since 2020, the PorsheKZ company has been occupying a leading position in the real estate market in Shymkent. Whatever you need - whether to invest in a new home or sell an existing one - we will be happy to help you and carry out the transaction on the most favorable terms for you.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2> OUR OFFERS</h2>
+    <h4>What do we offer</h4>
+
+    <div class="img">
+      <img src="css/img/image 3.jpg" alt="">
+    </div>
+    <div class="img">
+      <img src="css/img/res2.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="css/img/res3.jpg" alt="">
+    </div>
+    <div class="img">
+        <img src="css/img/image 4.jpg" alt="">
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Feedback</h5></center>
+    <form id="form_input">
+      <label for="name">Your name <span>*</span></label><br>
+      <input type="text" placeholder="Enter your name" name="name" id="name"><br>
+      <label for="email">Email <span>*</span></label><br>
+			<input type="email" placeholder="Enter your email" name="email" id="email"><br>
+			<label for="message">Message <span>*</span></label><br>
+			<textarea placeholder="Enter your message" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Send message</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div class="title">
+        <h5>islamsarsen13@gmail.com</h5>
+        <h5>st. Manasa, Almaty, Kazakhstan</h5>
+        <h5>+7 123 456-78-90</h5>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
